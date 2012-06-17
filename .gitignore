@@ -1,1 +1,6 @@
+# Dropbox ...
 .netr*
+
+# Mac
+*.DS_Store
+
