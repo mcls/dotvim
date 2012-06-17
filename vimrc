@@ -48,10 +48,3 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.test set filetype=php
   augroup END
 endif
-
-" Syntax Highlighting
-" - sass
-au BufRead,BufNewFile *.scss set filetype=scss
-" - scala
-au BufRead,BufNewFile *.scala set filetype=scala
-au! Syntax scala source ~/.vim/syntax/scala.vim
