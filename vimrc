@@ -34,18 +34,22 @@ set t_vb=         " When no beep or flash is wanted, use ':set vb t_vb='.
 " ------------------------------------------------------------------------------
 " Vim UI
 " ------------------------------------------------------------------------------
+set mh  " Hide the mouse when typing
+
 set nocursorcolumn
 set nocursorline
-set linespace=0     " No extra pixel space between rows
+
 set number          " Line Numbers
 set numberwidth=4   " Width of line numbers
 set ruler
 set showmatch       " Show matching brackets
 set matchtime=3     " ... for 3 tenths of a second
-set foldmethod=manual
 
+set linespace=0     " No extra pixel space between rows
+set foldmethod=manual
 set laststatus=2    " Always show the statusline
 set cmdheight=2     " Make the command area two lines high
+
 set encoding=utf-8
 if exists('+colorcolumn')
   set colorcolumn=80  " Color the 80th column differently
