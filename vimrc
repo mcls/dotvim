@@ -61,7 +61,10 @@ endif
 " Text formatting / Syntax
 " ------------------------------------------------------------------------------
 set ai      " Automatically indent new lines
-syntax on   " Syntax highlighting on
+
+syntax enable
+set background=dark
+colorscheme solarized
 
 set expandtab     " Tabs to spaces
 set tabstop=2     " Number of spaces that a <Tab> in the file counts for.
