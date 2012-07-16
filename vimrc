@@ -51,10 +51,7 @@ set laststatus=2    " Always show the statusline
 set cmdheight=2     " Make the command area two lines high
 
 set encoding=utf-8
-if exists('+colorcolumn')
-  set colorcolumn=80  " Color the 80th column differently
-  hi ColorColumn ctermbg=lightgrey guibg=lightgrey
-endif
+
 
 
 " ------------------------------------------------------------------------------
@@ -62,15 +59,27 @@ endif
 " ------------------------------------------------------------------------------
 set ai      " Automatically indent new lines
 
-syntax enable
-set background=dark
-colorscheme solarized
 
 set expandtab     " Tabs to spaces
 set tabstop=2     " Number of spaces that a <Tab> in the file counts for.
 set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
 set softtabstop=2 " Number of spaces that a <Tab> counts for while performing 
                   " editing operations, like inserting a <Tab> or using <BS>.  
+
+
+
+" ------------------------------------------------------------------------------
+" Theme
+" ------------------------------------------------------------------------------
+syntax enable
+set background=dark
+colorscheme solarized
+
+if exists('+colorcolumn')
+  set colorcolumn=80  " Color the 80th column differently
+  hi! ColorColumn ctermbg=9
+endif
+
 
 
 " ------------------------------------------------------------------------------
