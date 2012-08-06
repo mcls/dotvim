@@ -80,3 +80,12 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.test set filetype=php
   augroup END
 endif
+
+
+
+" ------------------------------------------------------------------------------
+" Snipmate
+" ------------------------------------------------------------------------------
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {} 
+let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
