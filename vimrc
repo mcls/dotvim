@@ -66,6 +66,11 @@ set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
 set softtabstop=2 " Number of spaces that a <Tab> counts for while performing 
                   " editing operations, like inserting a <Tab> or using <BS>.  
 
+" Automatically remove trailing whitespace on save
+" For more info ( eg. restricting to certain file types ), see: 
+" http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 
 
 " ------------------------------------------------------------------------------
