@@ -9,11 +9,12 @@ call pathogen#helptags()
 " General
 " ------------------------------------------------------------------------------
 " Disable the reading of .vimrc, .exrc and .gvimrc in the current directory.
-set noexrc  
+set noexrc
 
 " Detect filetypes
 filetype on
-filetype plugin on 
+filetype plugin on
+filetype indent on
 
 " Always show command or insert mode
 " If in Insert, Replace or Visual mode put a message on the last line.
@@ -63,11 +64,11 @@ set ai      " Automatically indent new lines
 set expandtab     " Tabs to spaces
 set tabstop=2     " Number of spaces that a <Tab> in the file counts for.
 set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
-set softtabstop=2 " Number of spaces that a <Tab> counts for while performing 
-                  " editing operations, like inserting a <Tab> or using <BS>.  
+set softtabstop=2 " Number of spaces that a <Tab> counts for while performing
+                  " editing operations, like inserting a <Tab> or using <BS>.
 
 " Automatically remove trailing whitespace on save
-" For more info ( eg. restricting to certain file types ), see: 
+" For more info ( eg. restricting to certain file types ), see:
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -104,5 +105,5 @@ endif
 " Snipmate
 " ------------------------------------------------------------------------------
 let g:snipMate = {}
-let g:snipMate.scope_aliases = {} 
+let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
