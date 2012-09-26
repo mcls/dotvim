@@ -67,10 +67,18 @@ set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
 set softtabstop=2 " Number of spaces that a <Tab> counts for while performing
                   " editing operations, like inserting a <Tab> or using <BS>.
 
+
 " Automatically remove trailing whitespace on save
-" For more info ( eg. restricting to certain file types ), see:
-" http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+fun! StripTrailingWhitespace()
+  " Only strip if the b:noStripeWhitespace variable isn't set
+  if exists('b:noStripWhitespace')
+    return
+  endif
+  %s/\s\+$//e
+endfun
+
+autocmd BufWritePre * call StripTrailingWhitespace()
+autocmd FileType rdoc,markdown let b:noStripWhitespace=1
 
 
 
@@ -85,6 +93,15 @@ if exists('+colorcolumn')
   set colorcolumn=80  " Color the 80th column differently
   hi! ColorColumn ctermbg=9
 endif
+
+
+
+" ------------------------------------------------------------------------------
+" Markdown, rdoc filetype
+" ------------------------------------------------------------------------------
+autocmd BufRead,BufNewFile *.markdown set filetype=markdown
+autocmd BufRead,BufNewFile *.rdoc set filetype=rdoc
+
 
 
 
