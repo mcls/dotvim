@@ -124,3 +124,10 @@ endif
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
+
+
+
+" ------------------------------------------------------------------------------
+" Keys
+" ------------------------------------------------------------------------------
+let mapleader = ","
