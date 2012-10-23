@@ -87,6 +87,7 @@ autocmd FileType rdoc,markdown let b:noStripWhitespace=1
 " ------------------------------------------------------------------------------
 syntax enable
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 if exists('+colorcolumn')
