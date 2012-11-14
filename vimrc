@@ -1,4 +1,4 @@
-" ------------------------------------------------------------------------------
+﻿" ------------------------------------------------------------------------------
 " Pathogen
 " ------------------------------------------------------------------------------
 call pathogen#runtime_append_all_bundles()
@@ -8,6 +8,9 @@ call pathogen#helptags()
 " ------------------------------------------------------------------------------
 " General
 " ------------------------------------------------------------------------------
+
+set encoding=utf-8
+
 " Disable the reading of .vimrc, .exrc and .gvimrc in the current directory.
 set noexrc
 
@@ -51,7 +54,6 @@ set foldmethod=manual
 set laststatus=2    " Always show the statusline
 set cmdheight=2     " Make the command area two lines high
 
-set encoding=utf-8
 
 
 
@@ -70,6 +72,9 @@ set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd Filetype css,scss setlocal ts=4 sts=4 sw=4 noexpandtab
 
+" Show invisible characters
+set list
+set listchars=tab:>-,trail:~,nbsp:.,precedes:<,extends:>
 
 " Automatically remove trailing whitespace on save
 fun! StripTrailingWhitespace()
