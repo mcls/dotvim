@@ -63,9 +63,12 @@ set ai      " Automatically indent new lines
 
 set expandtab     " Tabs to spaces
 set tabstop=2     " Number of spaces that a <Tab> in the file counts for.
-set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
 set softtabstop=2 " Number of spaces that a <Tab> counts for while performing
                   " editing operations, like inserting a <Tab> or using <BS>.
+set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
+
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+autocmd Filetype css,scss setlocal ts=4 sts=4 sw=4 noexpandtab
 
 
 " Automatically remove trailing whitespace on save
