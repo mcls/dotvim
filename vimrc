@@ -71,6 +71,7 @@ set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
 
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd Filetype css,scss setlocal ts=4 sts=4 sw=4 noexpandtab
+autocmd Filetype html,xhtml setlocal ts=2 sts=2 sw=2 noexpandtab
 
 " Show invisible characters
 set list
@@ -95,7 +96,7 @@ autocmd FileType rdoc,markdown let b:noStripWhitespace=1
 " ------------------------------------------------------------------------------
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 colorscheme solarized
 
 if exists('+colorcolumn')
