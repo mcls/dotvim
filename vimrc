@@ -96,6 +96,11 @@ autocmd FileType rdoc,markdown let b:noStripWhitespace=1
 " ------------------------------------------------------------------------------
 syntax enable
 set background=dark
+" If you do use the custom terminal colors, solarized.vim should work out of the
+" box for you. If you are using a terminal emulator that supports 256 colors and
+" don’t want to use the custom Solarized terminal colors, you will need to use
+" the degraded 256 colorscheme. To do so, simply add the following line before
+" the colorschem solarized line:
 " let g:solarized_termcolors=256
 colorscheme solarized
 
