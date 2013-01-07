@@ -10,6 +10,8 @@ setlocal ignorecase
 setlocal wrap
 setlocal lbr
 
+let s:current_file = expand("<sfile>:h:h")
+
 function! MarkdownRender(lines)
   if (system('which ruby') == "")
     throw "Could not find ruby!"
@@ -22,7 +24,9 @@ endfunction
 
 function! MarkdownRenderFile(lines, filename)
   let html = MarkdownRender(getbufline(bufname("%"), 1, '$'))
-  let html = "<html><head><title>" . bufname("%") . "</title><body>\n" . html . "\n</body></html>"
+  let stylesheet = s:current_file . "/css/github.css"
+  let css = "<link media=\"all\" href=\"" . stylesheet . "\" rel=\"stylesheet\">"
+  let html = "<html><head><title>" . bufname("%") . "</title>" . css . "<body>\n" . html . "\n</body></html>"
   return writefile(split(html, "\n"), a:filename)
 endfunction
 
