@@ -1,6 +1,5 @@
-" markdown.vim
 " Markdown preview using RDiscount ruby gem.
-" Put this file into .vim/ftplugin
+" Based on https://gist.github.com/723126
 
 command! -nargs=0 MarkdownPreview call MarkdownRenderBufferToPreview()
 
