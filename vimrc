@@ -147,3 +147,5 @@ let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
 " Keys
 " ------------------------------------------------------------------------------
 let mapleader = ","
+
+set shell=/bin/sh
