@@ -148,4 +148,13 @@ let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
 " ------------------------------------------------------------------------------
 let mapleader = ","
 
+
+
+" ------------------------------------------------------------------------------
+" Etcetera
+" ------------------------------------------------------------------------------
+" This is the easiest way to get ruby and rvm working in vim when using zsh
+" https://rvm.io/integration/vim/
 set shell=/bin/sh
+
+
