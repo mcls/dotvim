@@ -32,6 +32,6 @@ function! MarkdownRenderBufferToPreview()
 
   " Modify this line to make it compatible on other
   " platforms
-  call system("open ". filename)
+  call system("open -g ". filename)
 endfunction
 
