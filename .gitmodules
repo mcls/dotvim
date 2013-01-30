@@ -40,3 +40,6 @@
 [submodule "bundle/css-comb"]
 	path = bundle/css-comb
 	url = https://github.com/miripiruni/CSScomb-for-Vim.git
+[submodule "bundle/vim-slim"]
+	path = bundle/vim-slim
+	url = git://github.com/slim-template/vim-slim.git
