@@ -107,7 +107,7 @@ colorscheme solarized
 
 if exists('+colorcolumn')
   set colorcolumn=80  " Color the 80th column differently
-  hi! ColorColumn ctermbg=9
+  hi! ColorColumn ctermbg=7
 endif
 
 
