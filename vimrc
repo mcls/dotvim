@@ -95,7 +95,7 @@ autocmd FileType rdoc,markdown let b:noStripWhitespace=1
 " Theme
 " ------------------------------------------------------------------------------
 syntax enable
-set background=dark
+set background=light
 " If you do use the custom terminal colors, solarized.vim should work out of the
 " box for you. If you are using a terminal emulator that supports 256 colors and
 " don’t want to use the custom Solarized terminal colors, you will need to use
@@ -106,7 +106,7 @@ colorscheme solarized
 
 if exists('+colorcolumn')
   set colorcolumn=80  " Color the 80th column differently
-  hi! ColorColumn ctermbg=9
+  hi! ColorColumn ctermbg=7
 endif
 
 set cursorline
