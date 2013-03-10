@@ -41,7 +41,6 @@ set t_vb=         " When no beep or flash is wanted, use ':set vb t_vb='.
 set mh  " Hide the mouse when typing
 
 set nocursorcolumn
-set nocursorline
 
 set number          " Line Numbers
 set numberwidth=4   " Width of line numbers
@@ -109,6 +108,10 @@ if exists('+colorcolumn')
   set colorcolumn=80  " Color the 80th column differently
   hi! ColorColumn ctermbg=9
 endif
+
+set cursorline
+hi CursorLine cterm=NONE ctermbg=9 guibg=9
+hi CursorLineNr cterm=bold ctermfg=7 ctermbg=9 guibg=9
 
 
 
