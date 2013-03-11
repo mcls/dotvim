@@ -68,6 +68,8 @@ set softtabstop=2 " Number of spaces that a <Tab> counts for while performing
                   " editing operations, like inserting a <Tab> or using <BS>.
 set shiftwidth=2  " Number of spaces to use for each step of (auto)indent.
 
+set backspace=indent,eol,start
+
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd Filetype css,scss setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd Filetype html,xhtml setlocal ts=2 sts=2 sw=2 noexpandtab
@@ -106,12 +108,12 @@ colorscheme solarized
 
 if exists('+colorcolumn')
   set colorcolumn=80  " Color the 80th column differently
-  hi! ColorColumn ctermbg=9
+  hi! ColorColumn ctermbg=0
 endif
 
 set cursorline
-hi CursorLine cterm=NONE ctermbg=9 guibg=9
-hi CursorLineNr cterm=bold ctermfg=7 ctermbg=9 guibg=9
+hi CursorLine cterm=NONE ctermbg=0 guibg=0
+hi CursorLineNr cterm=bold ctermfg=7 ctermbg=0 guibg=9
 
 
 
