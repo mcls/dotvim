@@ -15,8 +15,6 @@ Make sure the RDiscount gem is installed, so Markdown can be previewed.
 
 ## Updating the bundles
 
-*Last updated on 18 Feb 2013*
-
 Run the following command to fetch the latest versions of the plugins from their
 git repos.
 
