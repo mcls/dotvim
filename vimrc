@@ -97,23 +97,31 @@ autocmd FileType rdoc,markdown let b:noStripWhitespace=1
 " Theme
 " ------------------------------------------------------------------------------
 syntax enable
-set background=dark
+
+" Try to ensure terminal uses 256 colors
+set term=xterm-256color
+set t_Co=256
+
 " If you do use the custom terminal colors, solarized.vim should work out of the
 " box for you. If you are using a terminal emulator that supports 256 colors and
 " don’t want to use the custom Solarized terminal colors, you will need to use
 " the degraded 256 colorscheme. To do so, simply add the following line before
-" the colorschem solarized line:
-" let g:solarized_termcolors=256
+" the colorscheme solarized line:
+let g:solarized_termcolors=256
+
+set background=light
 colorscheme solarized
 
+" Color the 80th column differently
 if exists('+colorcolumn')
-  set colorcolumn=80  " Color the 80th column differently
-  hi! ColorColumn ctermbg=0
+  set colorcolumn=80
+  hi! ColorColumn ctermbg=187
 endif
 
 set cursorline
-hi CursorLine cterm=NONE ctermbg=0 guibg=0
-hi CursorLineNr cterm=bold ctermfg=7 ctermbg=0 guibg=9
+" Uncomment next lines for further customization
+" hi CursorLine cterm=NONE ctermbg=8 guibg=8
+" hi CursorLineNr cterm=bold ctermfg=7 ctermbg=9 guibg=9
 
 
 
@@ -123,6 +131,8 @@ hi CursorLineNr cterm=bold ctermfg=7 ctermbg=0 guibg=9
 autocmd BufRead,BufNewFile *.markdown set filetype=markdown
 autocmd BufRead,BufNewFile *.rdoc set filetype=rdoc
 
+au BufRead,BufNewFile *.markdown setlocal textwidth=80
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 
 
