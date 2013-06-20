@@ -55,3 +55,6 @@
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = git://github.com/wting/rust.vim.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = https://github.com/tpope/vim-rails
