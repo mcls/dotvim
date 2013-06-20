@@ -75,6 +75,9 @@ autocmd Filetype css,scss setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd Filetype html,xhtml setlocal ts=2 sts=2 sw=2 noexpandtab
 autocmd Filetype php setlocal ts=2 sts=2 sw=2 noexpandtab
 
+autocmd BufRead,BufNewFile *.slim set filetype=slim
+autocmd Filetype slim setlocal ts=2 sts=2 sw=2 expandtab
+
 " Show invisible characters
 set list
 set listchars=tab:>-,trail:~,nbsp:.,precedes:<,extends:>
