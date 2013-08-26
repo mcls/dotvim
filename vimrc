@@ -176,3 +176,4 @@ let mapleader = ","
 set shell=/bin/sh
 
 
+autocmd BufRead,BufNewFile *.gradle set filetype=groovy
