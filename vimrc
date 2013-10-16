@@ -26,6 +26,19 @@ set showmode
 " Not compatible with 'vi', required for using eclim
 set nocp
 
+set autoread
+set directory-=. " don't store swapfiles in current directory
+set history=10000
+
+" Prevent Vim from clobbering the scrollback buffer. See
+" http://www.shallowsky.com/linux/noaltscreen.html
+set t_ti= t_te=
+
+" Configure tab completion
+set wildmode=longest,list,full
+set wildmenu
+
+set synmaxcol=160
 
 " ------------------------------------------------------------------------------
 " Sounds
