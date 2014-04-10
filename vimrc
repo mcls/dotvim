@@ -38,7 +38,7 @@ set t_ti= t_te=
 set wildmode=longest,list,full
 set wildmenu
 
-set synmaxcol=160
+set synmaxcol=240
 
 " ------------------------------------------------------------------------------
 " Sounds
