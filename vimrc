@@ -85,7 +85,7 @@ set backspace=indent,eol,start
 
 autocmd BufRead,BufNewFile *.slim set filetype=slim
 autocmd Filetype slim setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype go setlocal ts=2 sts=2 sw=2 noexpandtab
+autocmd Filetype go setlocal ts=4 sts=4 sw=4 noexpandtab nolist
 
 " Show invisible characters
 set list
