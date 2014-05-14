@@ -34,6 +34,7 @@ set history=10000
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
+
 " Configure tab completion
 set wildmode=longest,list,full
 set wildmenu
@@ -184,7 +185,6 @@ let mapleader = ","
 " https://rvm.io/integration/vim/
 set shell=/bin/sh
 
-
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy
 
 set mouse=a
@@ -193,4 +193,13 @@ set mouse=a
 " http://stackoverflow.com/questions/3413189/vim-highlight-keyword-pairs-in-ruby-def-end-do-end-etc
 if version >= 703
   runtime macros/matchit.vim
+end
+
+" This fixes issues with tmux and the background color
+" Running :set t_ut= to disables 'Background Color Erase'.
+"
+" http://sunaku.github.io/vim-256color-bce.html
+" http://superuser.com/questions/559041/vim-backgroundcolor-in-tmux-how-to-force-zsh-to-use-screen-instead-of-xterm-in
+if &term =~ '256color'
+  set t_ut=
 end
