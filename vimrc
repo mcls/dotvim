@@ -73,7 +73,9 @@ set cmdheight=2     " Make the command area two lines high
 " ------------------------------------------------------------------------------
 " Text formatting / Syntax
 " ------------------------------------------------------------------------------
-set ai      " Automatically indent new lines
+set ai        " Automatically indent new lines
+set mouse=a   " Allow mouse usage
+set smartcase
 
 
 set expandtab     " Tabs to spaces
