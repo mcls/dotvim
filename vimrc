@@ -178,6 +178,11 @@ let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
 " ------------------------------------------------------------------------------
 let mapleader = ","
 
+" Prevent entering Ex mode
+" ( Entering Ex mode.  Type 'visual' to go to Normal mode.)
+" http://www.bestofvim.com/tip/leave-ex-mode-good/
+noremap Q <nop>
+
 
 
 " ------------------------------------------------------------------------------
@@ -189,7 +194,6 @@ set shell=/bin/sh
 
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy
 
-set mouse=a
 
 " Use % to navigate do end blocks in ruby
 " http://stackoverflow.com/questions/3413189/vim-highlight-keyword-pairs-in-ruby-def-end-do-end-etc
