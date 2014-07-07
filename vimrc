@@ -183,7 +183,11 @@ let mapleader = ","
 " http://www.bestofvim.com/tip/leave-ex-mode-good/
 noremap Q <nop>
 
-
+" Remap semicolon to colon, handy on qwerty
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
 
 " ------------------------------------------------------------------------------
 " Etcetera
