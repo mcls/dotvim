@@ -104,7 +104,7 @@ fun! StripTrailingWhitespace()
 endfun
 
 autocmd BufWritePre * call StripTrailingWhitespace()
-autocmd FileType rdoc,markdown let b:noStripWhitespace=1
+autocmd FileType rdoc,markdown,yaml let b:noStripWhitespace=1
 
 
 
