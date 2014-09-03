@@ -213,3 +213,5 @@ end
 if &term =~ '256color'
   set t_ut=
 end
+
+set spell spelllang=en_us
