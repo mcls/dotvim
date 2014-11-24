@@ -74,7 +74,7 @@ set cmdheight=2     " Make the command area two lines high
 " Text formatting / Syntax
 " ------------------------------------------------------------------------------
 set ai        " Automatically indent new lines
-set mouse=a   " Allow mouse usage
+set mouse=
 set smartcase
 
 
@@ -199,7 +199,7 @@ set shell=/bin/sh
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy
 
 
-" Use % to navigate do end blocks in ruby
+" Use % to navigate `do ... end` blocks in ruby
 " http://stackoverflow.com/questions/3413189/vim-highlight-keyword-pairs-in-ruby-def-end-do-end-etc
 if version >= 703
   runtime macros/matchit.vim
