@@ -67,3 +67,9 @@
 [submodule "bundle/vim-elixir"]
 	path = bundle/vim-elixir
 	url = git@github.com:elixir-lang/vim-elixir.git
+[submodule "bundle/elm"]
+	path = bundle/elm
+	url = git@github.com:vim-scripts/elm.vim.git
+[submodule "bundle/puppet"]
+	path = bundle/puppet
+	url = git://github.com/rodjek/vim-puppet.git

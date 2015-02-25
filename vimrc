@@ -39,7 +39,7 @@ set t_ti= t_te=
 set wildmode=longest,list,full
 set wildmenu
 
-set synmaxcol=240
+set synmaxcol=340
 
 " ------------------------------------------------------------------------------
 " Sounds
@@ -74,9 +74,8 @@ set cmdheight=2     " Make the command area two lines high
 " Text formatting / Syntax
 " ------------------------------------------------------------------------------
 set ai        " Automatically indent new lines
-set mouse=
+set mouse=a
 set smartcase
-
 
 set expandtab     " Tabs to spaces
 set tabstop=2     " Number of spaces that a <Tab> in the file counts for.
