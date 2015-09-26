@@ -17,3 +17,15 @@ git repos.
 
     git submodule foreach git pull -q origin master
 
+or
+
+    make update
+
+## Adding a plugin
+
+    git submodule add https://github.com/easymotion/vim-easymotion.git bundle/easymotion
+
+## Removing a plugin
+
+    git submodule deinit bundle/mod
+    git rm bundle/mod
