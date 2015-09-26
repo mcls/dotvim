@@ -102,10 +102,9 @@ fun! StripTrailingWhitespace()
   %s/\s\+$//e
 endfun
 
+
 autocmd BufWritePre * call StripTrailingWhitespace()
 autocmd FileType rdoc,markdown,yaml let b:noStripWhitespace=1
-
-
 
 " ------------------------------------------------------------------------------
 " Theme
