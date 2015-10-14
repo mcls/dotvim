@@ -174,7 +174,9 @@ let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
 " ------------------------------------------------------------------------------
 " Keys
 " ------------------------------------------------------------------------------
-let mapleader = ","
+" Use <space> as the leader key. I used to use ',' but it conflicts with a
+" movement command I want to use (see :help ,)
+let mapleader = " "
 
 " Prevent entering Ex mode
 " ( Entering Ex mode.  Type 'visual' to go to Normal mode.)
