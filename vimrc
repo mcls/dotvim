@@ -73,6 +73,12 @@ set cmdheight=2     " Make the command area two lines high
 " ------------------------------------------------------------------------------
 " Text formatting / Syntax
 " ------------------------------------------------------------------------------
+
+" Got laggy vim when using ruby syntax highlighting after I updated to El
+" Capitan, using the old regiex engine fixes it...
+" http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting/16920294#16920294
+set re=1 " Use the old regex engine
+
 set ai        " Automatically indent new lines
 set mouse=a
 set smartcase
