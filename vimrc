@@ -184,10 +184,10 @@ let mapleader = " "
 noremap Q <nop>
 
 " Remap semicolon to colon, handy on qwerty
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
+map ; :
+" To get the original ';' behavior, just hit it twice
+" More info: http://vim.wikia.com/wiki/Map_semicolon_to_colon
+noremap ;; ;
 
 " ------------------------------------------------------------------------------
 " Etcetera
