@@ -27,7 +27,14 @@ set showmode
 set nocp
 
 set autoread
-set directory-=. " don't store swapfiles in current directory
+
+" two path separators '//' will ensure file name uniqueness in the preserve
+" directory
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
+set undodir=~/.vim/tmp/undo//
+
+" number of entered command-lines remembered in a history table
 set history=10000
 
 " Prevent Vim from clobbering the scrollback buffer. See
