@@ -178,7 +178,7 @@ let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
 
 
 " ------------------------------------------------------------------------------
-" Keys
+" Keys & Commands
 " ------------------------------------------------------------------------------
 " Use <space> as the leader key. I used to use ',' but it conflicts with a
 " movement command I want to use (see :help ,)
@@ -194,6 +194,9 @@ map ; :
 " To get the original ';' behavior, just hit it twice
 " More info: http://vim.wikia.com/wiki/Map_semicolon_to_colon
 noremap ;; ;
+
+" Sort all words on a line
+command SortWords call setline('.', join(sort(split(getline('.'), ' ')), " "))
 
 " ------------------------------------------------------------------------------
 " Etcetera
