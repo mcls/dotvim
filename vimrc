@@ -102,6 +102,10 @@ autocmd BufRead,BufNewFile *.slim set filetype=slim
 autocmd Filetype slim setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype go setlocal ts=4 sts=4 sw=4 noexpandtab nolist
 
+" Prevents 'crontab: temp file must be edited in place' error on OS X
+" See http://calebthompson.io/crontab-and-vim-sitting-in-a-tree/
+autocmd Filetype crontab setlocal nobackup nowritebackup
+
 " Show invisible characters
 set list
 set listchars=tab:>-,trail:~,nbsp:.,precedes:<,extends:>
