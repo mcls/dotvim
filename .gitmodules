@@ -49,9 +49,6 @@
 [submodule "bundle/lightline"]
 	path = bundle/lightline
 	url = https://github.com/itchyny/lightline.vim.git
-[submodule "bundle/vim-eco"]
-	path = bundle/vim-eco
-	url = https://github.com/AndrewRadev/vim-eco.git
 [submodule "bundle/vim-golang"]
 	path = bundle/vim-golang
 	url = https://github.com/jnwhiteh/vim-golang.git
