@@ -189,6 +189,14 @@ let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
 
 
 " ------------------------------------------------------------------------------
+" Go (vim-go)
+" ------------------------------------------------------------------------------
+" Enable goimports to automatically insert import paths instead of gofmt:
+let g:go_fmt_command = "goimports"
+
+
+
+" ------------------------------------------------------------------------------
 " Keys & Commands
 " ------------------------------------------------------------------------------
 " Use <space> as the leader key. I used to use ',' but it conflicts with a
