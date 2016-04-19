@@ -159,10 +159,8 @@ set cursorline
 " Markdown, rdoc filetype
 " ------------------------------------------------------------------------------
 autocmd BufRead,BufNewFile *.markdown set filetype=markdown
+autocmd BufRead,BufNewFile *.md,*.markdown setlocal textwidth=80
 autocmd BufRead,BufNewFile *.rdoc set filetype=rdoc
-
-au BufRead,BufNewFile *.markdown setlocal textwidth=80
-au BufRead,BufNewFile *.md setlocal textwidth=80
 
 
 
