@@ -81,6 +81,8 @@ set cmdheight=2     " Make the command area two lines high
 " Text formatting / Syntax
 " ------------------------------------------------------------------------------
 
+syntax on
+
 " Got laggy vim when using ruby syntax highlighting after I updated to El
 " Capitan, using the old regiex engine fixes it...
 " http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting/16920294#16920294
@@ -119,14 +121,13 @@ fun! StripTrailingWhitespace()
   %s/\s\+$//e
 endfun
 
-
 autocmd BufWritePre * call StripTrailingWhitespace()
 autocmd FileType rdoc,markdown,yaml let b:noStripWhitespace=1
+
 
 " ------------------------------------------------------------------------------
 " Theme
 " ------------------------------------------------------------------------------
-syntax enable
 
 " Try to ensure terminal uses 256 colors
 set term=xterm-256color
