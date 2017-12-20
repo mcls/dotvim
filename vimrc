@@ -8,7 +8,6 @@ call pathogen#helptags()
 " ------------------------------------------------------------------------------
 " General
 " ------------------------------------------------------------------------------
-
 set encoding=utf-8
 
 " Disable the reading of .vimrc, .exrc and .gvimrc in the current directory.
@@ -138,15 +137,16 @@ set t_Co=256
 " don’t want to use the custom Solarized terminal colors, you will need to use
 " the degraded 256 colorscheme. To do so, simply add the following line before
 " the colorscheme solarized line:
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 
-set background=light
+" set background=dark
 colorscheme solarized
 
 " Color the 80th column differently
 if exists('+colorcolumn')
   set colorcolumn=80
-  hi! ColorColumn ctermbg=187
+  " hi! ColorColumn ctermbg=187
+  hi! ColorColumn ctermbg=0
 endif
 
 set cursorline
@@ -162,20 +162,6 @@ set cursorline
 autocmd BufRead,BufNewFile *.markdown set filetype=markdown
 autocmd BufRead,BufNewFile *.md,*.markdown setlocal textwidth=80
 autocmd BufRead,BufNewFile *.rdoc set filetype=rdoc
-
-
-
-" ------------------------------------------------------------------------------
-" Drupal files highlighting
-" ------------------------------------------------------------------------------
-if has("autocmd")
-  augroup module
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-    autocmd BufRead,BufNewFile *.test set filetype=php
-  augroup END
-endif
-
 
 
 " ------------------------------------------------------------------------------
@@ -201,6 +187,7 @@ let g:go_fmt_command = "goimports"
 " Use <space> as the leader key. I used to use ',' but it conflicts with a
 " movement command I want to use (see :help ,)
 let mapleader = " "
+" let mapleader = ","
 
 " Prevent entering Ex mode
 " ( Entering Ex mode.  Type 'visual' to go to Normal mode.)
@@ -242,3 +229,18 @@ if &term =~ '256color'
 end
 
 set spell spelllang=en_us
+
+" Heredoc syntax highlighting rules
+" See: https://github.com/joker1007/vim-ruby-heredoc-syntax
+let g:ruby_heredoc_syntax_filetypes = {
+      \ "graphql" : {
+      \   "start" : "GRAPHQL",
+      \},
+      \}
+
+" RSpec.vim mappings
+" https://github.com/thoughtbot/vim-rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
