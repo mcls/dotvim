@@ -7,7 +7,7 @@ update:
 
 save:
 	@git add -A
-	@git commit -am "Saved config"
+	@git commit -m "$$(curl -s whatthecommit.com/index.txt)"
 
 vimrc:
 	ln -nfs ./vimrc ~/.vimrc
