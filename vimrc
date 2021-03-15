@@ -45,7 +45,7 @@ set t_ti= t_te=
 set wildmode=longest,list,full
 set wildmenu
 
-set synmaxcol=340
+set synmaxcol=1000
 
 " ------------------------------------------------------------------------------
 " Sounds
@@ -75,11 +75,9 @@ set cmdheight=2     " Make the command area two lines high
 
 
 
-
 " ------------------------------------------------------------------------------
 " Text formatting / Syntax
 " ------------------------------------------------------------------------------
-
 syntax on
 
 " Got laggy vim when using ruby syntax highlighting after I updated to El
@@ -164,14 +162,6 @@ autocmd BufRead,BufNewFile *.md,*.markdown setlocal textwidth=80
 autocmd BufRead,BufNewFile *.rdoc set filetype=rdoc
 
 
-" ------------------------------------------------------------------------------
-" Snipmate
-" ------------------------------------------------------------------------------
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['php'] = 'php,tpl.php'
-
-
 
 " ------------------------------------------------------------------------------
 " Go (vim-go)
@@ -203,14 +193,14 @@ noremap ;; ;
 " Sort all words on a line
 command SortWords call setline('.', join(sort(split(getline('.'), ' ')), " "))
 
+
+
 " ------------------------------------------------------------------------------
 " Etcetera
 " ------------------------------------------------------------------------------
 " This is the easiest way to get ruby and rvm working in vim when using zsh
 " https://rvm.io/integration/vim/
 set shell=/bin/sh
-
-autocmd BufRead,BufNewFile *.gradle set filetype=groovy
 
 
 " Use % to navigate `do ... end` blocks in ruby
